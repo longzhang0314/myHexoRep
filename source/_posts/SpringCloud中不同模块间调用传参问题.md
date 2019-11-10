@@ -14,3 +14,5 @@ draft: true
 
 **4. 接口和实现类都需要加@RequestBody**
 
+**5. 如果使用@RequestParam注解，只需要在接口处添加，不要在实现类上添加该注解**
+
