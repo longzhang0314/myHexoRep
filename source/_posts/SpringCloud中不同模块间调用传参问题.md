@@ -2,6 +2,8 @@
 title: "SpringCloud中不同模块间调用传参问题"
 date: 2019-09-09T11:26:00+08:00
 draft: true
+categories:
+- Spring
 ---
 
 不同模块间调用时，通过Feign客户端组件调用其他服务，出现参数传过去后变成null的问题。注意如下：

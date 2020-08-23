@@ -2,6 +2,8 @@
 title: SpringBoot启动时SLF4J警告的一次解决
 date: 2019-11-10 15:35:05
 tags:
+categories:
+- Spring
 ---
 
 - 问题：SpringBoot中启动时发生**SLF4J: Class path contains multiple SLF4J bindings**警告

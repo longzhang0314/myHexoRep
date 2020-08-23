@@ -2,6 +2,8 @@
 title: Linux基本操作命令
 date: 2019-10-19 14:30:09
 tags:
+categories:
+- linux
 ---
 
 ##### 常用的grep 查找方式

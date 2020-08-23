@@ -2,6 +2,8 @@
 title: "windows系统最简单的Hugo博客搭建"
 date: 2019-09-04T10:11:02+08:00
 draft: true
+categories:
+- 工具
 ---
 
 #### 1.安装<br>

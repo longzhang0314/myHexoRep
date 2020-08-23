@@ -2,6 +2,8 @@
 title: "SpringCloud中其他模块事务能否回滚"
 date: 2019-09-09T11:20:30+08:00
 draft: true
+categories:
+- Spring
 ---
 
 在处理业务逻辑时，遇到异常回滚数据库操作是非常常见的，但是，在SpringCloud的项目中，如果遇到业务抛异常需要回滚调用的其他模块数据库操作，能否有效呢？<br>
