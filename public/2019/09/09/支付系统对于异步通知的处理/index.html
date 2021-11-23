@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="1. 传统做法调用第三方支付时，支付成功后通过第三方回调来获取最终的支付结果，之后处理支付成功的业务。 2. 如果接不到异步通知怎么办？ 一般来说，第三方支付，比如支付宝，新浪支付都会提供相应的交易查询接口，用来对该笔订单的最终结果进行查询。所以，部分企业采用发起交易之后，调用第三方查询来主动查询支付结果，彻底抛弃异步通知机制，保证不会因为网络等原因丢失交易结果。 但是，这种方式也存在一些问题：调">
+<meta property="og:type" content="article">
+<meta property="og:title" content="支付系统对于异步通知的处理">
+<meta property="og:url" content="http://yoursite.com/2019/09/09/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%AF%B9%E4%BA%8E%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E7%9A%84%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="阿龙的个人博客">
+<meta property="og:description" content="1. 传统做法调用第三方支付时，支付成功后通过第三方回调来获取最终的支付结果，之后处理支付成功的业务。 2. 如果接不到异步通知怎么办？ 一般来说，第三方支付，比如支付宝，新浪支付都会提供相应的交易查询接口，用来对该笔订单的最终结果进行查询。所以，部分企业采用发起交易之后，调用第三方查询来主动查询支付结果，彻底抛弃异步通知机制，保证不会因为网络等原因丢失交易结果。 但是，这种方式也存在一些问题：调">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-09-08T23:53:59.000Z">
+<meta property="article:modified_time" content="2021-11-23T14:19:16.396Z">
+<meta property="article:author" content="Draven">
+<meta property="article:tag" content="java,后端,程序猿">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/09/09/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%AF%B9%E4%BA%8E%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E7%9A%84%E5%A4%84%E7%90%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>支付系统对于异步通知的处理 | 阿龙的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">阿龙的个人博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%AF%B9%E4%BA%8E%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E7%9A%84%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          支付系统对于异步通知的处理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-09 07:53:59" itemprop="dateCreated datePublished" datetime="2019-09-09T07:53:59+08:00">2019-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">系统设计</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h5 id="1-传统做法"><a href="#1-传统做法" class="headerlink" title="1. 传统做法"></a>1. 传统做法</h5><p>调用第三方支付时，支付成功后通过第三方回调来获取最终的支付结果，之后处理支付成功的业务。</p>
+<h5 id="2-如果接不到异步通知怎么办？"><a href="#2-如果接不到异步通知怎么办？" class="headerlink" title="2. 如果接不到异步通知怎么办？"></a>2. 如果接不到异步通知怎么办？</h5><ul>
+<li>一般来说，第三方支付，比如支付宝，新浪支付都会提供相应的交易查询接口，用来对该笔订单的最终结果进行查询。所以，部分企业采用发起交易之后，调用第三方查询来主动查询支付结果，彻底抛弃异步通知机制，保证不会因为网络等原因丢失交易结果。</li>
+<li>但是，这种方式也存在一些问题：调用第三支付查询接口时，交易不一定结束，查询到的可能是不确定的结果，比如交易已经在第三方创建成功，但是是否交易成功的结果还没有拿到。针对这种情况，有些企业会采取创建交易后，线程睡眠1秒或2秒进行查询，但这种方式势必会导致用户不必要的等待，降低用户体验，并且，到底等几秒才是最合理的也没有定论。并且，大多数第三方支付的交易查询接口所返回的参数一般都比异步通知的参数要少，比如新浪支付在主动调用交易查询时，无法获得内部交易流失号等，这样会导致获取参数不全的问题。</li>
+<li>所以，作者采用以异步通知为主，以定时任务运行交易查询作为异步通知的辅助措施。<h5 id="3-具体操作"><a href="#3-具体操作" class="headerlink" title="3. 具体操作"></a>3. 具体操作</h5>在异步通知中处理所有的业务逻辑，包括对于必要参数的更新，以及通知订单或其他业务系统做后续的业务操作。使用分布式定时任务调度框架，添加定时查询任务，查询商户系统的流水表，对未拿到异步通知的订单主动去调用第三方查询，拿到最终的结果。作者这里使用的是XXL-JOB分布式任务调度平台。</li>
+</ul>
+<h5 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h5><ul>
+<li>定时任务设置多久一次，查询哪个时间段的订单？ <br><br><br>我们需要以异步通知的结果为准，所以定时任务查询的订单需要查询创建时间在当前时间一段时间之前的订单，仅作为没接到异步通知的保护措施。作者这里设置的是每两分钟一次定时任务，查询当前时间1分钟前到6分钟前的订单，这样可以保证每个待查询订单都有两次机会被定时任务保护，防止查询时仍然是待支付等不确定结果。<br><br></li>
+<li>定时任务中也进行业务逻辑，是否会和异步通知中重复，导致业务逻辑执行两次，比如两次发货等？<br><br><br><br>可以给异步处理和定时查询的具体逻辑中加锁，作者采用的是mysql更新乐观锁，通过唯一请求号更新具体的交易状态，以update结果是否为1作为条件进行后续逻辑。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/09/SpringBoot%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E6%97%B6@Mapper%E6%B3%A8%E8%A7%A3%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A/" rel="prev" title="SpringBoot项目启动时@Mapper注解相关警告">
+      <i class="fa fa-chevron-left"></i> SpringBoot项目启动时@Mapper注解相关警告
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/10/19/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" rel="next" title="Linux基本操作命令">
+      Linux基本操作命令 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%BC%A0%E7%BB%9F%E5%81%9A%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1. 传统做法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%A6%82%E6%9E%9C%E6%8E%A5%E4%B8%8D%E5%88%B0%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">2. 如果接不到异步通知怎么办？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">3. 具体操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">4.</span> <span class="nav-text">4.注意事项</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Draven</p>
+  <div class="site-description" itemprop="description">学习及踩坑记录</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Draven</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script src="/live2d-widget/autoload.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</body>
+</html>

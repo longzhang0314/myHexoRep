@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="学习及踩坑记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="阿龙的个人博客">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="阿龙的个人博客">
+<meta property="og:description" content="学习及踩坑记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Draven">
+<meta property="article:tag" content="java,后端,程序猿">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>阿龙的个人博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">阿龙的个人博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E4%B8%8A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/10/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%88%E4%B8%8A%EF%BC%89/" class="post-title-link" itemprop="url">单链表基本操作（上）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-10 14:02:07" itemprop="dateCreated datePublished" datetime="2019-11-10T14:02:07+08:00">2019-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/" itemprop="url" rel="index"><span itemprop="name">链表</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="链表作为最基本的两大数据结构之一，其重要性不言而喻，今天带大家一起回顾一下单链表最基本的一些操作。"><a href="#链表作为最基本的两大数据结构之一，其重要性不言而喻，今天带大家一起回顾一下单链表最基本的一些操作。" class="headerlink" title="链表作为最基本的两大数据结构之一，其重要性不言而喻，今天带大家一起回顾一下单链表最基本的一些操作。"></a>链表作为最基本的两大数据结构之一，其重要性不言而喻，今天带大家一起回顾一下单链表最基本的一些操作。</h5><ul>
+<li>节点的定义：链表的基础是单个节点，首先来看节点的代码，比较简单，直接列出。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> data;</span><br><span class="line">    <span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> data, Node next)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> data)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>链表的打印：思路也比较简单，就是从头节点开始遍历并打印。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list为头节点</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printAll</span><span class="params">(Node list)</span> </span>&#123;</span><br><span class="line">    Node p = list;</span><br><span class="line">    <span class="keyword">while</span> (p != <span class="keyword">null</span>) &#123;</span><br><span class="line">        System.out.println(p.data + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        p = p.next;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个新节点：这里单独列出，目的是后续做链表添加节点等操作时减少重复代码。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Node <span class="title">createNode</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Node(value, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>尾插：尾插的思路比较简单，就是让原链表的最后一个节点的next指针指向待插入节点即可。将指定的值或节点插入链表尾部，插入值和插入节点最终都会调用插入节点，代码如下。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将指定的值插入链表尾部</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertTailByValue</span><span class="params">(Node list, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    Node newNode = createNode(value);</span><br><span class="line">    <span class="comment">// 调用将指定的节点插入链表尾部的方法</span></span><br><span class="line">    insertTailByNode(list,newNode);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将指定的节点插入链表尾部</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertTailByNode</span><span class="params">(Node list,Node p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>) &#123;</span><br><span class="line">            list = p;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        Node q = list;</span><br><span class="line">        <span class="keyword">while</span> (q.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            q = q.next;</span><br><span class="line">        &#125;</span><br><span class="line">        p.next = list.next;</span><br><span class="line">        list.next = p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>头插：将指定的值或节点插入链表头部，插入值和插入节点最终都会调用插入节点，代码如下。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将指定的值插入链表头部</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertHeadByValue</span><span class="params">(Node list, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    Node newNode = createNode(value);</span><br><span class="line">    <span class="comment">// 调用将指定的节点插入链表头部的方法</span></span><br><span class="line">    insertHeadByNode(list, newNode);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将指定的节点插入链表头部</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertHeadByNode</span><span class="params">(Node list, Node p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>) &#123;</span><br><span class="line">        list = p;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        p.next = list;</span><br><span class="line">        list = p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查找：查找的思路也比较简单，根据链表的特性，从头节点往后遍历，查到就返回。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据value查Node</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Node <span class="title">findByValue</span><span class="params">(Node list, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    Node p = list;</span><br><span class="line">    <span class="keyword">while</span> (p != <span class="keyword">null</span> &amp;&amp; p.data != value) &#123;</span><br><span class="line">        p = p.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据index查Node</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Node <span class="title">findByIndex</span><span class="params">(Node list, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">    Node p = list;</span><br><span class="line">    <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (p != <span class="keyword">null</span> &amp;&amp; pos != index) &#123;</span><br><span class="line">        ++pos;</span><br><span class="line">        p = p.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据指定的值或指定的节点删除指定的节点：基本思路是遍历链表，找到待删除节点的前一个节点，让待删除节点的前一个节点的next指针值向它的下一个节点，需要注意边界条件的处理，代码如下。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据value删除节点</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">deleteByValue</span><span class="params">(Node list, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    Node p = list;</span><br><span class="line">    Node q = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">while</span> (p != <span class="keyword">null</span> &amp;&amp; p.data != value) &#123;</span><br><span class="line">        q = p;</span><br><span class="line">        p = p.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (q == <span class="keyword">null</span>) &#123;</span><br><span class="line">        list = list.next;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        q.next = q.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//根据Node删除节点</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">deleteByNode</span><span class="params">(Node list, Node p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span> || p == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (list == p) &#123;</span><br><span class="line">        list = list.next;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Node q = list;</span><br><span class="line">    <span class="keyword">while</span> (q != <span class="keyword">null</span> &amp;&amp; q.next != p) &#123;</span><br><span class="line">        q = q.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (q == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    q.next = q.next.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结</strong>：单链表的基本操作理解起来还是比较容易的，不过链表代码涉及很多指针的移动以及边界条件的判断，要写出free bug的链表代码需要多写多练。单链表还有一些稍微进阶的代码，在单链表基本操（下）篇进行介绍。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/Java%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/19/Java%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Java中字符串分割问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-19 14:37:52" itemprop="dateCreated datePublished" datetime="2019-10-19T14:37:52+08:00">2019-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stringObj.split([separator，[limit]]) </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>直接分割：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s &#x3D; &quot;a,b,c,d,,,&quot;;</span><br><span class="line">String[] strArr &#x3D; s.split(&quot;,&quot;);</span><br><span class="line">&#x2F;&#x2F;此时strArr为a,b,c,d</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>带limit条件分割:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s &#x3D; &quot;a,b,c,d,,,&quot;;</span><br><span class="line">String[] strArr &#x3D; s.split(&quot;,&quot;，-1);</span><br><span class="line">&#x2F;&#x2F;此时strArr为a,b,c,d,&quot;&quot;,&quot;&quot;,&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>分割特殊字符时需要使用转义字符:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s &#x3D; &quot;a$b$c&quot;;</span><br><span class="line">String[] strArr &#x3D; s.split(&quot;\\$&quot;);</span><br><span class="line">&#x2F;&#x2F;此时strArr为a,b,c</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/19/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Linux基本操作命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-19 14:30:09" itemprop="dateCreated datePublished" datetime="2019-10-19T14:30:09+08:00">2019-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="常用的grep-查找方式"><a href="#常用的grep-查找方式" class="headerlink" title="常用的grep 查找方式"></a>常用的grep 查找方式</h5><ol>
+<li><p><strong>单个文件搜索</strong><br>grep 字符串 a.log</p>
+</li>
+<li><p><strong>多个文件搜索</strong><br>grep 字符串 *.log</p>
+</li>
+<li><p><strong>上下文多少行</strong><br>-C n 前后 多少行，  -A n  之后n行， -B n 之前n行<br>grep Exce base.log  -C 20<br>grep Exce base.log  -A 20<br>grep Exce base.log  -B 20</p>
+</li>
+<li><p><strong>管道，在上个结果的基础上继续搜索  =  and 条件</strong><br>grep 字符串 *.log  | grep 第二个条件</p>
+</li>
+<li><p><strong>或条件</strong></p>
+<p>grep -E ‘广点通|今日头条’ base.log </p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%AF%B9%E4%BA%8E%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E7%9A%84%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/09/%E6%94%AF%E4%BB%98%E7%B3%BB%E7%BB%9F%E5%AF%B9%E4%BA%8E%E5%BC%82%E6%AD%A5%E9%80%9A%E7%9F%A5%E7%9A%84%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">支付系统对于异步通知的处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-09 07:53:59" itemprop="dateCreated datePublished" datetime="2019-09-09T07:53:59+08:00">2019-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">系统设计</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="1-传统做法"><a href="#1-传统做法" class="headerlink" title="1. 传统做法"></a>1. 传统做法</h5><p>调用第三方支付时，支付成功后通过第三方回调来获取最终的支付结果，之后处理支付成功的业务。</p>
+<h5 id="2-如果接不到异步通知怎么办？"><a href="#2-如果接不到异步通知怎么办？" class="headerlink" title="2. 如果接不到异步通知怎么办？"></a>2. 如果接不到异步通知怎么办？</h5><ul>
+<li>一般来说，第三方支付，比如支付宝，新浪支付都会提供相应的交易查询接口，用来对该笔订单的最终结果进行查询。所以，部分企业采用发起交易之后，调用第三方查询来主动查询支付结果，彻底抛弃异步通知机制，保证不会因为网络等原因丢失交易结果。</li>
+<li>但是，这种方式也存在一些问题：调用第三支付查询接口时，交易不一定结束，查询到的可能是不确定的结果，比如交易已经在第三方创建成功，但是是否交易成功的结果还没有拿到。针对这种情况，有些企业会采取创建交易后，线程睡眠1秒或2秒进行查询，但这种方式势必会导致用户不必要的等待，降低用户体验，并且，到底等几秒才是最合理的也没有定论。并且，大多数第三方支付的交易查询接口所返回的参数一般都比异步通知的参数要少，比如新浪支付在主动调用交易查询时，无法获得内部交易流失号等，这样会导致获取参数不全的问题。</li>
+<li>所以，作者采用以异步通知为主，以定时任务运行交易查询作为异步通知的辅助措施。<h5 id="3-具体操作"><a href="#3-具体操作" class="headerlink" title="3. 具体操作"></a>3. 具体操作</h5>在异步通知中处理所有的业务逻辑，包括对于必要参数的更新，以及通知订单或其他业务系统做后续的业务操作。使用分布式定时任务调度框架，添加定时查询任务，查询商户系统的流水表，对未拿到异步通知的订单主动去调用第三方查询，拿到最终的结果。作者这里使用的是XXL-JOB分布式任务调度平台。</li>
+</ul>
+<h5 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h5><ul>
+<li>定时任务设置多久一次，查询哪个时间段的订单？ <br><br><br>我们需要以异步通知的结果为准，所以定时任务查询的订单需要查询创建时间在当前时间一段时间之前的订单，仅作为没接到异步通知的保护措施。作者这里设置的是每两分钟一次定时任务，查询当前时间1分钟前到6分钟前的订单，这样可以保证每个待查询订单都有两次机会被定时任务保护，防止查询时仍然是待支付等不确定结果。<br><br></li>
+<li>定时任务中也进行业务逻辑，是否会和异步通知中重复，导致业务逻辑执行两次，比如两次发货等？<br><br><br><br>可以给异步处理和定时查询的具体逻辑中加锁，作者采用的是mysql更新乐观锁，通过唯一请求号更新具体的交易状态，以update结果是否为1作为条件进行后续逻辑。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/SpringBoot%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E6%97%B6@Mapper%E6%B3%A8%E8%A7%A3%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/09/SpringBoot%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E6%97%B6@Mapper%E6%B3%A8%E8%A7%A3%E7%9B%B8%E5%85%B3%E8%AD%A6%E5%91%8A/" class="post-title-link" itemprop="url">SpringBoot项目启动时@Mapper注解相关警告</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-09 03:26:59" itemprop="dateCreated datePublished" datetime="2019-09-09T03:26:59+08:00">2019-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;Xxx1Mapper&#39; and &#39;com.demo.finance.mapper.Xxx1Mapper&#39; mapperInterface. Bean already defined with the same name!</span><br><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;YyMapper&#39; and &#39;com.demo.finance.mapper.YyMapper&#39; mapperInterface. Bean already defined with the same name!</span><br><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;ZzMapper&#39; and &#39;com.demo.finance.mapper.ZzMapper&#39; mapperInterface. Bean already defined with the same name!</span><br><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;AaMapper&#39; and &#39;com.demo.finance.mapper.AaMapper&#39; mapperInterface. Bean already defined with the same name!</span><br><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;BbMapper&#39; and &#39;com.demo.finance.mapper.BbMapper&#39; mapperInterface. Bean already defined with the same name!</span><br><span class="line">2019-08-27 15:27:27 | WARN  | main | org.mybatis.spring.mapper.ClassPathMapperScanner | Skipping MapperFactoryBean with name &#39;CcMapper&#39; and &#39;com.demo.finance.mapper.CcMapper&#39; mapperInterface. Bean already defined with the same name!</span><br></pre></td></tr></table></figure>
+<p>项目启动时，控制台打印上述日志，原因是在Dao层使用了@Mapper注解，同时在启动类上添加了@MapperScane注解。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li>只使用@Mapper注解，无需在启动类上开启扫描；</li>
+<li>Dao层使用@Repository注解，并在启动类上使用@MapperScane(“mapper目录”)进行扫描</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/SpringCloud%E4%B8%AD%E4%B8%8D%E5%90%8C%E6%A8%A1%E5%9D%97%E9%97%B4%E8%B0%83%E7%94%A8%E4%BC%A0%E5%8F%82%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/09/SpringCloud%E4%B8%AD%E4%B8%8D%E5%90%8C%E6%A8%A1%E5%9D%97%E9%97%B4%E8%B0%83%E7%94%A8%E4%BC%A0%E5%8F%82%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">SpringCloud中不同模块间调用传参问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-09 03:26:00" itemprop="dateCreated datePublished" datetime="2019-09-09T03:26:00+08:00">2019-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>不同模块间调用时，通过Feign客户端组件调用其他服务，出现参数传过去后变成null的问题。注意如下：</p>
+<p><strong>1. 尽量使用@PostMapping注解，而不是@RequestMapping(value = “url”,method = RequestMethod.POST)</strong></p>
+<p><strong>2. 使用@RequestParam注解时必须要在后面加上参数名</strong></p>
+<p><strong>3. Controller层互相调用不要忘记@RequestBody注解</strong></p>
+<p><strong>4. 接口和实现类都需要加@RequestBody</strong></p>
+<p><strong>5. 如果使用@RequestParam注解，只需要在接口处添加，不要在实现类上添加该注解</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/SpringCloud%E4%B8%AD%E5%85%B6%E4%BB%96%E6%A8%A1%E5%9D%97%E4%BA%8B%E5%8A%A1%E8%83%BD%E5%90%A6%E5%9B%9E%E6%BB%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/09/SpringCloud%E4%B8%AD%E5%85%B6%E4%BB%96%E6%A8%A1%E5%9D%97%E4%BA%8B%E5%8A%A1%E8%83%BD%E5%90%A6%E5%9B%9E%E6%BB%9A/" class="post-title-link" itemprop="url">SpringCloud中其他模块事务能否回滚</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-09 03:20:30" itemprop="dateCreated datePublished" datetime="2019-09-09T03:20:30+08:00">2019-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在处理业务逻辑时，遇到异常回滚数据库操作是非常常见的，但是，在SpringCloud的项目中，如果遇到业务抛异常需要回滚调用的其他模块数据库操作，能否有效呢？<br><br><strong>1. 使用@Transactional注解在方法上</strong><br><br><br>发现无法回滚，可以回滚本地自己模块的操作，但无法回滚调用的其他模块的数据库操作。<br><br><br><strong>2. 使用手动事务</strong><br><br><br>手动设置回滚点在需要回滚的操作之前，抛异常后手动回滚事务。<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;设置回滚点</span><br><span class="line">Object savePoint &#x3D; TransactionAspectSupport.currentTransactionStatus().createSavepoint(); </span><br><span class="line">&#x2F;&#x2F;数据库代码</span><br><span class="line">&#x2F;*</span><br><span class="line">    代码~~~</span><br><span class="line">*&#x2F;</span><br><span class="line">&#x2F;&#x2F;手动回滚</span><br><span class="line">TransactionAspectSupport.currentTransactionStatus().rollbackToSavepoint(savePoint);</span><br></pre></td></tr></table></figure>
+<p>根据最终结果发现，这种方式也是无效的。<br><br><br></p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>SpringCloud模块中，每个模块对于自己模块的事务管理都是独立的，调用其他模块的服务，想要在本地通过回滚的方式回滚数据库操作是不现实的，所以，需要在代码设计之初就要考虑到这种情况，根据某些确定的条件之后再去做数据库操作，如果确实需要根据结果做回滚操作，可以再将数据update回去或者delete掉。也可以采用分布式事务框架。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/hexo%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/05/hexo%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">hexo搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-05 02:07:01" itemprop="dateCreated datePublished" datetime="2019-09-05T02:07:01+08:00">2019-09-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="1-安装依赖环境"><a href="#1-安装依赖环境" class="headerlink" title="1.安装依赖环境"></a>1.安装依赖环境<br></h4><ul>
+<li>需要提前安装git，并拥有一个github账号。</li>
+<li>安装Nodejs,npm</li>
+<li>node -v #查看node版本</li>
+<li>npm -v #查看npm版本</li>
+<li>npm install -g cnpm – registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a> #安装淘宝的cnpm 管理器</li>
+<li>cnpm -v #查看cnpm版本</li>
+<li>cnpm install -g hexo-cli #安装hexo框架</li>
+<li>hexo -v #查看hexo版本</li>
+</ul>
+<hr>
+<h4 id="2-安装本地博客"><a href="#2-安装本地博客" class="headerlink" title="2.安装本地博客"></a>2.安装本地博客<br></h4><ul>
+<li>mkdir blog #创建blog目录</li>
+<li>cd blog #进入blog目录</li>
+<li>sudo hexo init #生成博客 初始化博客</li>
+<li>hexo s #启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> #本地访问地址</li>
+<li>hexo n “我的第一篇文章” #创建新的文章</li>
+</ul>
+<h4 id="3-发布到github"><a href="#3-发布到github" class="headerlink" title="3.发布到github"></a>3.发布到github<br></h4><ul>
+<li><p>返回blog目录</p>
+</li>
+<li><p>hexo clean #清理</p>
+</li>
+<li><p>hexo g #生成</p>
+</li>
+<li><p>#Github创建一个新的仓库 YourGithubName.github.io</p>
+</li>
+<li><p>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件</p>
+</li>
+<li><p>配置_config.yml</p>
+</li>
+<li><p>Deployment</p>
+</li>
+<li><p>Docs: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a></p>
+</li>
+<li><p>内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/YourGithubName/YourGithubName.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
+<li><p>hexo d #部署到Github仓库里</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a> #访问这个地址可以查看博客</p>
+</li>
+</ul>
+<h4 id="4-个性化主题"><a href="#4-个性化主题" class="headerlink" title="4.个性化主题"></a>4.个性化主题<br></h4><ul>
+<li>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia #下载yilia主题到本地</li>
+<li>修改hexo根目录下的 _config.yml 文件 ： theme: yilia</li>
+</ul>
+<h4 id="5-每次重新发布"><a href="#5-每次重新发布" class="headerlink" title="5. 每次重新发布"></a>5. 每次重新发布<br></h4><ul>
+<li>hexo c #清理一下</li>
+<li>hexo g #生成</li>
+<li>hexo d #部署到远程Github仓库</li>
+<li><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a> #查看博客</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/git%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/git%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF/" class="post-title-link" itemprop="url">Git新建一个分支</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-04 08:12:53" itemprop="dateCreated datePublished" datetime="2019-09-04T08:12:53+08:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/kaerxifa/p/11045573.html">https://www.cnblogs.com/kaerxifa/p/11045573.html</a></p>
+<ol>
+<li><p>进入本地git仓库目录，使用git branch指令，发现只有master分支</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用git branch 分支名来创建分支，创建完成后再次使用git branch查看，发现本地已经多出了一个新建的分支。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：git branch 201909</span><br><span class="line">输入：git branch</span><br><span class="line">输出：201909</span><br><span class="line">    *master </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时远程仓库并没有这个分支，我们需要使用git push origin 分支名 命令将本地修改推送到远程服务器上。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入：git push origin 201909</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>push完成后就可以在远程服务上看到新建的分支了（原本是1 branches）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 branchches</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/hugo%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draven">
+      <meta itemprop="description" content="学习及踩坑记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿龙的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/hugo%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">windows系统最简单的Hugo博客搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-04 02:11:02" itemprop="dateCreated datePublished" datetime="2019-09-04T02:11:02+08:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-23 22:19:16" itemprop="dateModified" datetime="2021-11-23T22:19:16+08:00">2021-11-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装<br></h4><ul>
+<li>需要提前安装git，并拥有一个github账号。</li>
+<li>widows需要在<a target="_blank" rel="noopener" href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>处下载hugo运行需要的二级制码<strong>hugo_0.57.2_Windows-64bit.zip</strong>，并解压配置系统变量。<br><br>在命令行使用如下命令确认是否安装正确：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo version</span><br></pre></td></tr></table></figure>
+<ul>
+<li>打印如下内容表示安装成功：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hugo Static Site Generator v0.57.2-A849CB2D windows&#x2F;amd64 BuildDate: 2019-08-17T17:54:13Z</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-生成站点"><a href="#2-生成站点" class="headerlink" title="2. 生成站点"></a>2. 生成站点</h4><p>切换至想要创建的目录，运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo new site myblog</span><br></pre></td></tr></table></figure>
+<p>打印如下内容表示生成站点成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Congratulations! Your new Hugo site is created</span><br></pre></td></tr></table></figure>
+<h4 id="3-下载主题"><a href="#3-下载主题" class="headerlink" title="3. 下载主题"></a>3. 下载主题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd myblog</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;vaga&#x2F;hugo-theme-m10c.git themes&#x2F;m10c</span><br></pre></td></tr></table></figure>
+<p>打印如下内容表示主题下载成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &#39;themes&#x2F;m10c&#39;...</span><br><span class="line">remote: Enumerating objects: 18, done.</span><br><span class="line">remote: Counting objects: 100% (18&#x2F;18), done.</span><br><span class="line">remote: Compressing objects: 100% (17&#x2F;17), done.</span><br><span class="line">remote: Total 265 (delta 4), reused 11 (delta 1), pack-reused 247</span><br><span class="line">Receiving objects:  65% (173&#x2F;265), 420.01 KiB | 136.00 KiB&#x2F;s</span><br><span class="line">Receiving objects: 100% (265&#x2F;265), 447.54 KiB | 140.00 KiB&#x2F;s, done.</span><br><span class="line">Resolving deltas: 100% (82&#x2F;82), done.</span><br></pre></td></tr></table></figure>
+<h4 id="4-创建文章"><a href="#4-创建文章" class="headerlink" title="4. 创建文章"></a>4. 创建文章</h4><p>在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo new post&#x2F;blog.md</span><br></pre></td></tr></table></figure>
+<p>会显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myblog\content\post\myblog.md created</span><br></pre></td></tr></table></figure>
+<p>创建的文章会自动生成到content目录下，你可以去对应的目录找到刚刚创建的文章，使用markdown编辑器编辑你的博客。</p>
+<h4 id="5-本地启动"><a href="#5-本地启动" class="headerlink" title="5. 本地启动"></a>5. 本地启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo server -t m10c --buildDrafts</span><br></pre></td></tr></table></figure>
+<p>打印如下内容表示本地启动成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Building sites …</span><br><span class="line">                   | EN</span><br><span class="line">+------------------+----+</span><br><span class="line">  Pages            |  7</span><br><span class="line">  Paginator pages  |  0</span><br><span class="line">  Non-page files   |  0</span><br><span class="line">  Static files     |  1</span><br><span class="line">  Processed images |  0</span><br><span class="line">  Aliases          |  3</span><br><span class="line">  Sitemaps         |  1</span><br><span class="line">  Cleaned          |  0</span><br><span class="line"></span><br><span class="line">Total in 77 ms</span><br><span class="line">Watching for changes in D:\qwwww\mmmqqq\&#123;archetypes,content,data,layouts,static,themes&#125;</span><br><span class="line">Watching for config changes in D:\qwwww\mmmqqq\config.toml</span><br><span class="line">Environment: &quot;development&quot;</span><br><span class="line">Serving pages from memory</span><br><span class="line">Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender</span><br><span class="line">Web Server is available at http:&#x2F;&#x2F;localhost:1313&#x2F; (bind address 127.0.0.1)</span><br><span class="line">Press Ctrl+C to stop</span><br></pre></td></tr></table></figure>
+
+<p>启动后安装提示访问<a target="_blank" rel="noopener" href="http://localhost:1313/">http://localhost:1313/</a>，就可以成功看到你的博客网站啦~</p>
+<h4 id="6-部署到github"><a href="#6-部署到github" class="headerlink" title="6. 部署到github"></a>6. 部署到github</h4><p>首先在你的github上创建一个新的仓库，这里命名很重要，否则会导致后续无法访问等问题，Repositor的名称要用<strong>你的github名.github.io</strong>，比如我的是<strong>longzhang0314.github.io</strong>否则会导致后续无法正常访问。<br><br><br>回到本地命令行，返回站点目录，输入如下命令，目的是生成最终页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo --theme&#x3D;m10c --baseUrl&#x3D;&quot;https:&#x2F;&#x2F;longzhang0314.github.io&quot; --buildDrafts</span><br></pre></td></tr></table></figure>
+<p>显示如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Building sites …</span><br><span class="line">                   | EN</span><br><span class="line">+------------------+----+</span><br><span class="line">  Pages            | 10</span><br><span class="line">  Paginator pages  |  0</span><br><span class="line">  Non-page files   |  0</span><br><span class="line">  Static files     |  1</span><br><span class="line">  Processed images |  0</span><br><span class="line">  Aliases          |  4</span><br><span class="line">  Sitemaps         |  1</span><br><span class="line">  Cleaned          |  0</span><br><span class="line"></span><br><span class="line">Total in 63 ms</span><br></pre></td></tr></table></figure>
+<p>此时，在站点目录下会生成一个public文件夹，这个文件夹中的内容就是我们的博客展示的静态资源了，我们只需要把这个文件夹中的内容push到master分支即可，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd public</span><br><span class="line">git init</span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;longzhang0314&#x2F;longzhang0314.github.io.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;我的 hugo 博客第一次提交&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>命令行中最终显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Enumerating objects: 32, done.</span><br><span class="line">Counting objects: 100% (32&#x2F;32), done.</span><br><span class="line">Delta compression using up to 8 threads</span><br><span class="line">Compressing objects: 100% (23&#x2F;23), done.</span><br><span class="line">Writing objects: 100% (32&#x2F;32), 7.49 KiB | 1.07 MiB&#x2F;s, done.</span><br><span class="line">Total 32 (delta 11), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (11&#x2F;11), done.</span><br><span class="line">To https:&#x2F;&#x2F;github.com&#x2F;longzhang0314&#x2F;longzhang0314.github.io.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br><span class="line">Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.</span><br></pre></td></tr></table></figure>
+<p>这就表示一切顺利了<del><br><br>浏览器中访问<a target="_blank" rel="noopener" href="https://longzhang0314.github.io/">https://longzhang0314.github.io</a>就可以看到你的博客啦</del></p>
+<h4 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h4><p>之后更换主题等操作以后可能会需要的指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Draven</p>
+  <div class="site-description" itemprop="description">学习及踩坑记录</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Draven</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script src="/live2d-widget/autoload.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</body>
+</html>
